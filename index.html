@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Study Japanese</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <h1>Lession 1</h1>
+    <h2 id="title"></h2>
+    <h2 id="step"></h2>
+    <div id="btnStart">
+        <button type="button" onclick="learning.display1(arrJp,arrVn)" class="btn">Start</button>
+    </div>
+    <div id="display1" class="display"></div>
+    <div id="display2" class="display"></div>
+    <div id="answer1" class="ans"></div>
+    <div id="answer2" class="ans"></div>
+    <div id="answer3" class="ans"></div>
+    <div id="answer4" class="ans"></div>
+    <div id="answer5" class="ans"></div>
+    <div id="btnNext" class="btn"></div>
+
+<script src="js/testing.js"></script>
+<script src="js/learning.js"></script>
+<script src="js/checkResult.js"></script>
+<script>
+    let arrJp = [
+        ['あ', 'い', 'う', 'え', 'お'],
+        ['か', 'き', 'く', 'け', 'こ'],
+        ['さ', 'し', 'す', 'せ', 'そ'],
+        ['な', 'に', 'ぬ', 'ね', 'の'],
+        ['は', 'ひ', 'ふ', 'へ', 'ほ'],
+        ['ま', 'み', 'む', 'め', 'も'],
+        ['ら', 'り', 'る', 'れ', 'ろ'],
+        ['や', 'ゆ', 'よ', 'ん', 'を']
+    ];
+    let arrVn = [
+        ['a', 'i', 'u', 'e', 'o'],
+        ['ka', 'ki', 'ku', 'ke', 'ko'],
+        ['sa', 'shi', 'su', 'se', 'so'],
+        ['na', 'ni', 'nu', 'ne', 'no'],
+        ['ha', 'hi', 'fu', 'he', 'ho'],
+        ['ma', 'mi', 'mu', 'me', 'mo'],
+        ['ra', 'ri', 'ru', 're', 'ro'],
+        ['ya', 'yu', 'yo', 'n', 'wo']
+    ];
+    let learning = new Learning(arrJp, arrVn);
+    let testing = new Testing();
+    testing.toConnect(learning);
+
+</script>
+</body>
+</html>

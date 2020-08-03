@@ -1,0 +1,29 @@
+body {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.btn {
+    position: absolute;
+    top: 500px;
+    left: 620px;
+}
+
+h1 {
+    background-color: cornflowerblue;
+}
+
+#title {
+    color: orange;
+}
+
+.display {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.ans {
+    font-size: 20px;
+}
