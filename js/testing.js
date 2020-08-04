@@ -59,11 +59,11 @@ class Testing {
     }
 
     clearAns() {
-        document.getElementById("answer1").innerHTML ='';
-        document.getElementById("answer2").innerHTML ='';
-        document.getElementById("answer3").innerHTML ='';
-        document.getElementById("answer4").innerHTML ='';
-        document.getElementById("answer5").innerHTML ='';
+        document.getElementById("answer1").innerHTML = '';
+        document.getElementById("answer2").innerHTML = '';
+        document.getElementById("answer3").innerHTML = '';
+        document.getElementById("answer4").innerHTML = '';
+        document.getElementById("answer5").innerHTML = '';
         document.getElementById("btnStart").innerHTML = '';
     }
 
@@ -149,16 +149,21 @@ class Testing {
     }
 
     checkWin() {
+        this.getCountWin();
+        this.getCountI();
         let strQues = document.getElementById("display1").innerHTML.slice(4, 5);
-
-        let idxAns = '';
-
+        console.log(strQues);
+        if (this.countI != 0 && arrJp[this.countI].indexOf(strQues) == -1) {
+            strQues = document.getElementById("display1").innerHTML.slice(4, 6);
+        }
+        console.log(strQues);
         let arrAns1 = document.getElementById("answer1").innerHTML.slice(34, 36);
         let arrAns2 = document.getElementById("answer2").innerHTML.slice(34, 36);
         let arrAns3 = document.getElementById("answer3").innerHTML.slice(34, 36);
         let arrAns4 = document.getElementById("answer4").innerHTML.slice(34, 36);
         let arrAns5 = document.getElementById("answer5").innerHTML.slice(34, 36);
 
+        let idxAns = '';
         if (document.getElementById(`${arrAns1}`).checked) {
             idxAns = arrAns1;
         } else if (document.getElementById(`${arrAns2}`).checked) {
@@ -202,5 +207,6 @@ class Testing {
         document.getElementById("display2").innerHTML = "Please wait to module 2";
         this.clearAns();
         document.getElementById("btnNext").innerHTML = '';
+        document.getElementById("step").innerHTML = 'Finish';
     }
 }
